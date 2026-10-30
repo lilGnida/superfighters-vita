@@ -1,10 +1,10 @@
 # Super Fighters — C++/SDL2 port (PC + PS Vita), stage 1: offline core
 
-Native C++ rewrite of https://github.com/Ebomb09/SuperFighters-JS (Box2D instead of Matter.js).
+Native C++ port on Box2D.
 Included: maps (.sfm), players, melee/guns/grenades/fire/explosions, one-way platforms, ladders,
 weapon drops, round restart, 1–2 local players. Not yet: network multiplayer (stage 2).
 
-## PC build (tested)
+## PC build
     sudo apt install build-essential cmake pkg-config libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev
     cmake -S . -B build && cmake --build build -j
     ./build/superfighters                       # menu
