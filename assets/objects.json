@@ -1,0 +1,2829 @@
+{
+ "objects": {
+  "dirt": {
+   "image": {
+    "image": "images/dirt.png"
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "material": "dirt",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "concrete": {
+   "image": {
+    "image": "images/concrete.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 3
+   },
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "concrete_stair00": {
+   "image": {
+    "image": "images/concrete_stair00.png"
+   },
+   "shape": "tl-br",
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "concrete_stair01": {
+   "image": {
+    "image": "images/concrete_stair01.png"
+   },
+   "shape": "tr-bl",
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "concrete_slope00": {
+   "image": {
+    "image": "images/concrete_slope00.png"
+   },
+   "shape": "tl-br",
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "concrete_slope01": {
+   "image": {
+    "image": "images/concrete_slope01.png"
+   },
+   "shape": "tr-bl",
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "brick": {
+   "image": {
+    "image": "images/brick.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "material": "stone",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "block": {
+   "image": {
+    "image": "images/block.png"
+   },
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "girder": {
+   "image": {
+    "image": "images/girder.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "material": "metal",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "metal": {
+   "image": {
+    "image": "images/metal.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "material": "metal",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "crate": {
+   "image": {
+    "image": "images/crate.png"
+   },
+   "health": 50,
+   "flammable": true,
+   "material": "wood",
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "crate_hanging": {
+   "image": {
+    "image": "images/crate_hanging.png"
+   },
+   "material": "wood",
+   "cls": "Hanging",
+   "group": "dynamic_active",
+   "health": 60
+  },
+  "barrel": {
+   "image": {
+    "image": "images/barrel.png"
+   },
+   "material": "metal",
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "explosive_barrel": {
+   "image": {
+    "image": "images/explosive_barrel.png"
+   },
+   "frameIndex": {
+    "x": 0,
+    "y": 0
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "material": "metal",
+   "health": 1,
+   "flammable": true,
+   "damageModifier": {
+    "melee": 0
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "explosive_barrel_debris": {
+   "image": {
+    "image": "images/explosive_barrel.png"
+   },
+   "frameIndex": {
+    "x": 1,
+    "y": 0
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "material": "metal",
+   "health": 1,
+   "flammable": true,
+   "damageModifier": {
+    "melee": 0,
+    "collision": 100
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "grenade": {
+   "image": {
+    "image": "images/grenade.png"
+   },
+   "material": "metal",
+   "health": 1,
+   "damageModifier": {
+    "melee": 0,
+    "collision": 0
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "molotov": {
+   "image": {
+    "image": "images/molotov.png"
+   },
+   "health": 1,
+   "damageModifier": {
+    "melee": 0,
+    "collision": 100
+   },
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_glass00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_glass01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "filecab": {
+   "image": {
+    "image": "images/filecab.png"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "globe": {
+   "image": {
+    "image": "images/globe.png"
+   },
+   "shape": "circle",
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "pipe": {
+   "image": {
+    "image": "images/pipe.png"
+   },
+   "shape": "circle",
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "desk": {
+   "image": {
+    "image": "images/desk.png"
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "chair": {
+   "image": {
+    "image": "images/chair.png"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "table": {
+   "image": {
+    "image": "images/table.png"
+   },
+   "health": 35,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "small_table": {
+   "image": {
+    "image": "images/small_table.png"
+   },
+   "health": 15,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "air_duct": {
+   "image": {
+    "image": "images/air_duct.png"
+   },
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "pool_table": {
+   "image": {
+    "image": "images/pool_table.png"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "computer_monitor": {
+   "image": {
+    "image": "images/computer_monitor.png"
+   },
+   "health": 5,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_computer00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_computer01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_inactive"
+  },
+  "computer_desktop": {
+   "image": {
+    "image": "images/computer_desktop.png"
+   },
+   "health": 5,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_computer00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_computer01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_inactive"
+  },
+  "target": {
+   "image": {
+    "image": "images/target.png"
+   },
+   "health": 5,
+   "flammable": true,
+   "matter": {
+    "isStatic": true
+   },
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_inactive"
+  },
+  "table_chair": {
+   "image": {
+    "image": "images/table_chair.png"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_inactive"
+  },
+  "beachball": {
+   "image": {
+    "image": "images/beachball.png"
+   },
+   "health": 25,
+   "shape": "circle",
+   "gravityScale": 0.25,
+   "matter": {
+    "restitution": 1,
+    "frictionAir": 0
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_inactive"
+  },
+  "paper": {
+   "image": {
+    "image": "images/paper.png"
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "health": 5,
+   "flammable": true,
+   "cls": "BaseObject",
+   "group": "dynamic_inactive"
+  },
+  "target_debris00": {
+   "image": {
+    "image": "images/target_debris00.png"
+   },
+   "health": 5,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "target_debris01": {
+   "image": {
+    "image": "images/target_debris01.png"
+   },
+   "health": 5,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "target_debris02": {
+   "image": {
+    "image": "images/target_debris02.png"
+   },
+   "health": 5,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "beachball_debris": {
+   "image": {
+    "image": "images/beachball_debris.png"
+   },
+   "health": 10,
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "crate_debris00": {
+   "image": {
+    "image": "images/crate_debris00.png"
+   },
+   "health": 25,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "crate_debris01": {
+   "image": {
+    "image": "images/crate_debris01.png"
+   },
+   "health": 25,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "crate_debris02": {
+   "image": {
+    "image": "images/crate_debris02.png"
+   },
+   "health": 25,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "table_debris00": {
+   "image": {
+    "image": "images/table_debris00.png"
+   },
+   "health": 15,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "table_debris01": {
+   "image": {
+    "image": "images/table_debris01.png"
+   },
+   "health": 15,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "table_debris02": {
+   "image": {
+    "image": "images/table_debris02.png"
+   },
+   "health": 15,
+   "flammable": true,
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "BaseObject",
+   "group": "debris"
+  },
+  "player": {
+   "image": {
+    "image": "images/player.png"
+   },
+   "frameCount": {
+    "x": 10,
+    "y": 9
+   },
+   "health": 100,
+   "flammable": true,
+   "sounds": {
+    "damage_melee": [
+     {
+      "sound": "sounds/player/hit_player00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/hit_player01.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/hit_player02.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/hit_player03.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "damage_cut": [
+     {
+      "sound": "sounds/player/cut_player00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/cut_player01.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/cut_player02.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "damage_collision": [
+     {
+      "sound": "sounds/player/hit_player00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/hit_player01.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/hit_player02.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/hit_player03.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "roll": {
+     "sound": "sounds/player/roll.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "jump": {
+     "sound": "sounds/player/jump.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "punch": [
+     {
+      "sound": "sounds/player/punch00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/player/punch01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "cls": "Player",
+   "group": "player"
+  },
+  "projectile": {
+   "image": {
+    "image": "images/projectile.png"
+   },
+   "cls": "Projectile",
+   "group": "projectile"
+  },
+  "rocket": {
+   "image": {
+    "image": "images/rocket.png"
+   },
+   "frameCount": {
+    "x": 4,
+    "y": 1
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "Projectile",
+   "group": "projectile"
+  },
+  "fire": {
+   "image": {
+    "image": "images/fire.png"
+   },
+   "lifeTime": 180,
+   "gravityScale": 0.2,
+   "cls": "Fire",
+   "group": "dynamic_inactive",
+   "matter": {
+    "inertia": null,
+    "frictionAir": 0.05,
+    "friction": 0
+   }
+  },
+  "hit": {
+   "image": {
+    "image": "images/effect/hit.png"
+   },
+   "frameCount": {
+    "x": 4,
+    "y": 2
+   },
+   "lifeTime": 6,
+   "animation": [
+    {
+     "x": 1,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 1,
+     "y": 1,
+     "delay": 3
+    }
+   ],
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "explosion_small": {
+   "image": {
+    "image": "images/effect/hit.png"
+   },
+   "frameCount": {
+    "x": 4,
+    "y": 2
+   },
+   "lifeTime": 6,
+   "animation": [
+    {
+     "x": 2,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 2,
+     "y": 1,
+     "delay": 3
+    }
+   ],
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "explosion_large": {
+   "image": {
+    "image": "images/effect/hit.png"
+   },
+   "frameCount": {
+    "x": 4,
+    "y": 2
+   },
+   "lifeTime": 6,
+   "animation": [
+    {
+     "x": 3,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 3,
+     "y": 1,
+     "delay": 3
+    }
+   ],
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "electric": {
+   "image": {
+    "image": "images/effect/electric.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "lifeTime": 9,
+   "animation": [
+    {
+     "x": 0,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 1,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 2,
+     "y": 0,
+     "delay": 3
+    }
+   ],
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "spark": {
+   "image": {
+    "image": "images/effect/spark.png"
+   },
+   "frameCount": {
+    "x": 5,
+    "y": 1
+   },
+   "lifeTime": 15,
+   "animation": [
+    {
+     "x": 0,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 1,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 2,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 3,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 4,
+     "y": 0,
+     "delay": 3
+    }
+   ],
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "blood_small": {
+   "image": {
+    "image": "images/effect/blood.png"
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "frameIndex": {
+    "x": 0,
+    "y": 0
+   },
+   "lifeTime": 30,
+   "fade": true,
+   "group": "debris",
+   "cls": "Effect"
+  },
+  "blood_large": {
+   "image": {
+    "image": "images/effect/blood.png"
+   },
+   "frameCount": {
+    "x": 2,
+    "y": 1
+   },
+   "frameIndex": {
+    "x": 1,
+    "y": 0
+   },
+   "lifeTime": 30,
+   "fade": true,
+   "group": "debris",
+   "cls": "Effect"
+  },
+  "casing_small": {
+   "image": {
+    "image": "images/effect/casing_small.png"
+   },
+   "lifeTime": 30,
+   "fade": true,
+   "group": "dynamic_inactive",
+   "cls": "Effect"
+  },
+  "casing_large": {
+   "image": {
+    "image": "images/effect/casing_large.png"
+   },
+   "lifeTime": 30,
+   "fade": true,
+   "group": "dynamic_inactive",
+   "cls": "Effect"
+  },
+  "shell": {
+   "image": {
+    "image": "images/effect/shell.png"
+   },
+   "lifeTime": 30,
+   "fade": true,
+   "group": "dynamic_inactive",
+   "cls": "Effect"
+  },
+  "smoke": {
+   "image": {
+    "image": "images/effect/smoke.png"
+   },
+   "lifeTime": 30,
+   "fade": true,
+   "disableGravity": true,
+   "group": "dynamic_inactive",
+   "cls": "Effect"
+  },
+  "burn": {
+   "image": {
+    "image": "images/effect/burn.png"
+   },
+   "frameCount": {
+    "x": 5,
+    "y": 1
+   },
+   "animation": [
+    {
+     "x": 0,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 1,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 2,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 3,
+     "y": 0,
+     "delay": 3
+    },
+    {
+     "x": 4,
+     "y": 0,
+     "delay": 3
+    }
+   ],
+   "animateRealTime": true,
+   "lifeTime": 2,
+   "disableGravity": true,
+   "group": "none",
+   "cls": "Effect"
+  },
+  "heavy_flash": {
+   "image": {
+    "image": "images/effect/muzzle_flash/heavy_flash.png"
+   },
+   "lifeTime": 2,
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "light_flash": {
+   "image": {
+    "image": "images/effect/muzzle_flash/light_flash.png"
+   },
+   "lifeTime": 2,
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "rifle_flash": {
+   "image": {
+    "image": "images/effect/muzzle_flash/rifle_flash.png"
+   },
+   "lifeTime": 2,
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "axe_swing": {
+   "image": {
+    "image": "images/effect/axe_swing.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "lifeTime": 2,
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "sword_swing": {
+   "image": {
+    "image": "images/effect/sword_swing.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "lifeTime": 2,
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "machete_swing": {
+   "image": {
+    "image": "images/effect/machete_swing.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "lifeTime": 2,
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none",
+   "cls": "Effect"
+  },
+  "pistol": {
+   "image": {
+    "image": "images/weapon/pistol.png"
+   },
+   "ammo": 12,
+   "damage": 6,
+   "speed": 15,
+   "timing": 12,
+   "spread": 5,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "casing_small"
+   },
+   "flash": {
+    "ref": "light_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/pistol00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/pistol01.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/pistol02.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/pistol03.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/light_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/light_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0,
+   "knockback": 0.9
+  },
+  "uzi": {
+   "image": {
+    "image": "images/weapon/uzi.png"
+   },
+   "ammo": 25,
+   "burst": 5,
+   "damage": 6,
+   "speed": 15,
+   "timing": 24,
+   "spread": 10,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "casing_small"
+   },
+   "flash": {
+    "ref": "light_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/uzi00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/uzi01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/light_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/light_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0,
+   "knockback": 0.7
+  },
+  "magnum": {
+   "image": {
+    "image": "images/weapon/magnum.png"
+   },
+   "ammo": 6,
+   "damage": 25,
+   "speed": 15,
+   "timing": 24,
+   "spread": 1,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "casing_small"
+   },
+   "flash": {
+    "ref": "heavy_flash"
+   },
+   "sounds": {
+    "fire": {
+     "sound": "sounds/weapon/magnum.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "empty": {
+     "sound": "sounds/weapon/light_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/light_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0.5,
+   "knockback": 2.6
+  },
+  "rifle": {
+   "image": {
+    "image": "images/weapon/rifle.png"
+   },
+   "ammo": 25,
+   "burst": 5,
+   "damage": 7,
+   "speed": 15,
+   "timing": 24,
+   "spread": 5,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "casing_small"
+   },
+   "flash": {
+    "ref": "rifle_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/rifle00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/rifle01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/heavy_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/rifle_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0.1,
+   "knockback": 1.0
+  },
+  "shotgun": {
+   "image": {
+    "image": "images/weapon/shotgun.png"
+   },
+   "ammo": 8,
+   "count": 4,
+   "damage": 6,
+   "speed": 15,
+   "timing": 24,
+   "spread": 20,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "shell"
+   },
+   "flash": {
+    "ref": "heavy_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/shotgun00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/shotgun01.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/shotgun02.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/heavy_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/shotgun_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0.6,
+   "knockback": 1.0
+  },
+  "sniper": {
+   "image": {
+    "image": "images/weapon/sniper.png"
+   },
+   "ammo": 5,
+   "damage": 66,
+   "speed": 15,
+   "timing": 24,
+   "spread": 0,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "casing_large"
+   },
+   "flash": {
+    "ref": "rifle_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/sniper00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/sniper01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/heavy_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/rifle_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0.8,
+   "knockback": 4.5
+  },
+  "flamethrower": {
+   "image": {
+    "image": "images/weapon/flamethrower.png"
+   },
+   "ammo": 60,
+   "burst": 10,
+   "speed": 4,
+   "timing": 30,
+   "spread": 15,
+   "projectile": {
+    "ref": "fire"
+   },
+   "sounds": {
+    "fireOnce": {
+     "sound": "sounds/fireplosion.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "empty": {
+     "sound": "sounds/weapon/light_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/heavy_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0,
+   "knockback": 0
+  },
+  "bazooka": {
+   "image": {
+    "image": "images/weapon/bazooka.png"
+   },
+   "ammo": 3,
+   "speed": 4,
+   "timing": 30,
+   "spread": 5,
+   "projectile": {
+    "ref": "rocket"
+   },
+   "flash": {
+    "ref": "heavy_flash"
+   },
+   "sounds": {
+    "fire": {
+     "sound": "sounds/weapon/bazooka.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "empty": {
+     "sound": "sounds/weapon/heavy_draw.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/bazooka_aim.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 1.0,
+   "knockback": 0
+  },
+  "fists": {
+   "image": {
+    "image": "images/weapon/fists.png"
+   },
+   "hands": 0,
+   "damage": {
+    "hp": 7
+   },
+   "hitbox": [
+    [
+     {
+      "x": 8,
+      "y": -3,
+      "width": 6,
+      "height": 5
+     }
+    ],
+    [
+     {
+      "x": 7,
+      "y": -2,
+      "width": 5,
+      "height": 7
+     }
+    ],
+    [
+     {
+      "x": 8,
+      "y": -3,
+      "width": 6,
+      "height": 5
+     }
+    ]
+   ],
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "sword": {
+   "image": {
+    "image": "images/weapon/sword.png"
+   },
+   "hands": 2,
+   "effect": {
+    "ref": "sword_swing"
+   },
+   "damage": {
+    "hp": 10,
+    "sound": "cut"
+   },
+   "hitbox": [
+    [
+     {
+      "x": 0,
+      "y": 0,
+      "width": 39,
+      "height": 12
+     }
+    ],
+    [
+     {
+      "x": 11,
+      "y": -15,
+      "width": 25,
+      "height": 10
+     },
+     {
+      "x": 22,
+      "y": -3,
+      "width": 6,
+      "height": 13
+     }
+    ],
+    [
+     {
+      "x": 12,
+      "y": -9,
+      "width": 18,
+      "height": 8
+     },
+     {
+      "x": 19,
+      "y": 1,
+      "width": 5,
+      "height": 12
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "axe": {
+   "image": {
+    "image": "images/weapon/axe.png"
+   },
+   "hands": 2,
+   "effect": {
+    "ref": "axe_swing"
+   },
+   "damage": {
+    "hp": 10,
+    "sound": "cut"
+   },
+   "hitbox": [
+    [
+     {
+      "x": 0,
+      "y": 0,
+      "width": 31,
+      "height": 12
+     }
+    ],
+    [
+     {
+      "x": 5,
+      "y": -12,
+      "width": 22,
+      "height": 10
+     },
+     {
+      "x": 14,
+      "y": -1,
+      "width": 6,
+      "height": 13
+     }
+    ],
+    [
+     {
+      "x": 8,
+      "y": -7,
+      "width": 17,
+      "height": 9
+     },
+     {
+      "x": 13,
+      "y": 3,
+      "width": 7,
+      "height": 11
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "machete": {
+   "image": {
+    "image": "images/weapon/machete.png"
+   },
+   "hands": 1,
+   "effect": {
+    "ref": "machete_swing"
+   },
+   "damage": {
+    "hp": 10,
+    "sound": "cut"
+   },
+   "hitbox": [
+    [
+     {
+      "x": 1,
+      "y": 1,
+      "width": 19,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 3,
+      "y": -13,
+      "width": 27,
+      "height": 8
+     },
+     {
+      "x": 14,
+      "y": -4,
+      "width": 5,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 10,
+      "y": 0,
+      "width": 12,
+      "height": 20
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "grenades": {
+   "image": {
+    "image": "images/weapon/grenades.png"
+   },
+   "ammo": 3,
+   "projectile": {
+    "ref": "grenade"
+   },
+   "detonationTime": 120,
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/grenade_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Throwable",
+   "group": "dynamic_inactive",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "molotovs": {
+   "image": {
+    "image": "images/weapon/molotovs.png"
+   },
+   "ammo": 3,
+   "projectile": {
+    "ref": "molotov"
+   },
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/grenade_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Throwable",
+   "group": "dynamic_inactive",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "player_spawn": {
+   "image": {
+    "image": "images/marker/player_spawn.png"
+   },
+   "cls": "Marker",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "weapon_spawn": {
+   "image": {
+    "image": "images/marker/weapon_spawn.png"
+   },
+   "cls": "Marker",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "distance_marker": {
+   "image": {
+    "image": "images/marker/distance.png"
+   },
+   "oncreate": {
+    "fn": true,
+    "name": "oncreate"
+   },
+   "cls": "Marker",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "ladder": {
+   "image": {
+    "image": "images/ladder.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "cls": "Ladder",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "platform": {
+   "image": {
+    "image": "images/platform.png"
+   },
+   "frameCount": {
+    "x": 3,
+    "y": 1
+   },
+   "cls": "Platform",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "platform"
+  },
+  "wall": {
+   "image": {
+    "image": "images/collider.png"
+   },
+   "material": "concrete",
+   "matter": {
+    "isStatic": true
+   },
+   "cls": "BaseObject",
+   "group": "static"
+  },
+  "ledge": {
+   "image": {
+    "image": "images/collider.png"
+   },
+   "cls": "Platform",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "platform"
+  },
+  "climb": {
+   "image": {
+    "image": "images/collider.png"
+   },
+   "cls": "Ladder",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "exit_door": {
+   "image": {
+    "image": "images/collider.png"
+   },
+   "cls": "Door",
+   "matter": {
+    "isStatic": true,
+    "isSensor": true
+   },
+   "group": "none"
+  },
+  "glass": {
+   "image": {
+    "image": "images/glass.png"
+   },
+   "health": 1,
+   "cls": "BaseObject",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "static",
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_glass00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_glass01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   }
+  },
+  "glass_shard": {
+   "image": {
+    "image": "images/glass_shard.png"
+   },
+   "health": 1,
+   "cls": "BaseObject",
+   "lifeTime": 600,
+   "fade": true,
+   "group": "debris"
+  },
+  "corpse": {
+   "image": {
+    "image": "images/player.png"
+   },
+   "frameCount": {
+    "x": 10,
+    "y": 9
+   },
+   "cls": "Corpse",
+   "group": "debris"
+  },
+  "smg": {
+   "image": {
+    "image": "images/weapon/smg.png"
+   },
+   "ammo": 30,
+   "burst": 3,
+   "damage": 5,
+   "speed": 15,
+   "timing": 12,
+   "spread": 9,
+   "projectile": {
+    "ref": "projectile"
+   },
+   "expel": {
+    "ref": "casing_small"
+   },
+   "flash": {
+    "ref": "light_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/uzi00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/uzi01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/light_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/light_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0,
+   "knockback": 0.6
+  },
+  "lobbed_grenade": {
+   "image": {
+    "image": "images/grenade.png"
+   },
+   "material": "metal",
+   "health": 1,
+   "damageModifier": {
+    "melee": 0,
+    "collision": 0
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active",
+   "lifeTime": 75
+  },
+  "grenade_launcher": {
+   "image": {
+    "image": "images/weapon/grenade_launcher.png"
+   },
+   "ammo": 4,
+   "speed": 7,
+   "timing": 36,
+   "spread": 2,
+   "projectile": {
+    "ref": "lobbed_grenade"
+   },
+   "flash": {
+    "ref": "heavy_flash"
+   },
+   "sounds": {
+    "fire": {
+     "sound": "sounds/weapon/bazooka.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "empty": {
+     "sound": "sounds/weapon/heavy_draw.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/bazooka_aim.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0.5,
+   "knockback": 0
+  },
+  "taser_bolt": {
+   "image": {
+    "image": "images/taser_bolt.png"
+   },
+   "cls": "Projectile",
+   "group": "projectile",
+   "stun": 70
+  },
+  "taser": {
+   "image": {
+    "image": "images/weapon/taser.png"
+   },
+   "ammo": 5,
+   "damage": 4,
+   "speed": 12,
+   "timing": 40,
+   "spread": 1,
+   "projectile": {
+    "ref": "taser_bolt"
+   },
+   "expel": {
+    "ref": "casing_small"
+   },
+   "flash": {
+    "ref": "light_flash"
+   },
+   "sounds": {
+    "fire": [
+     {
+      "sound": "sounds/weapon/pistol00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/pistol01.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/pistol02.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/weapon/pistol03.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ],
+    "empty": {
+     "sound": "sounds/weapon/light_outofammo.ogg",
+     "volume": 1,
+     "loop": false
+    },
+    "draw": {
+     "sound": "sounds/weapon/light_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Gun",
+   "group": "item",
+   "matter": {
+    "isStatic": true
+   },
+   "recoil": 0,
+   "knockback": 0
+  },
+  "bat": {
+   "image": {
+    "image": "images/weapon/bat.png"
+   },
+   "hands": 2,
+   "effect": {
+    "ref": "sword_swing"
+   },
+   "damage": {
+    "hp": 12
+   },
+   "hitbox": [
+    [
+     {
+      "x": 0,
+      "y": 0,
+      "width": 39,
+      "height": 12
+     }
+    ],
+    [
+     {
+      "x": 11,
+      "y": -15,
+      "width": 25,
+      "height": 10
+     },
+     {
+      "x": 22,
+      "y": -3,
+      "width": 6,
+      "height": 13
+     }
+    ],
+    [
+     {
+      "x": 12,
+      "y": -9,
+      "width": 18,
+      "height": 8
+     },
+     {
+      "x": 19,
+      "y": 1,
+      "width": 5,
+      "height": 12
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   },
+   "knockback": 2.6
+  },
+  "knife": {
+   "image": {
+    "image": "images/weapon/knife.png"
+   },
+   "hands": 1,
+   "effect": {
+    "ref": "machete_swing"
+   },
+   "damage": {
+    "hp": 9,
+    "sound": "cut"
+   },
+   "hitbox": [
+    [
+     {
+      "x": 1,
+      "y": 1,
+      "width": 19,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 3,
+      "y": -13,
+      "width": 27,
+      "height": 8
+     },
+     {
+      "x": 14,
+      "y": -4,
+      "width": 5,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 10,
+      "y": 0,
+      "width": 12,
+      "height": 20
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   },
+   "thrownDamage": 32
+  },
+  "plank": {
+   "image": {
+    "image": "images/weapon/plank.png"
+   },
+   "hands": 1,
+   "effect": {
+    "ref": "machete_swing"
+   },
+   "damage": {
+    "hp": 9
+   },
+   "hitbox": [
+    [
+     {
+      "x": 1,
+      "y": 1,
+      "width": 19,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 3,
+      "y": -13,
+      "width": 27,
+      "height": 8
+     },
+     {
+      "x": 14,
+      "y": -4,
+      "width": 5,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 10,
+      "y": 0,
+      "width": 12,
+      "height": 20
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   },
+   "durability": 5
+  },
+  "pipe_club": {
+   "image": {
+    "image": "images/weapon/pipe_club.png"
+   },
+   "hands": 1,
+   "effect": {
+    "ref": "machete_swing"
+   },
+   "damage": {
+    "hp": 12
+   },
+   "hitbox": [
+    [
+     {
+      "x": 1,
+      "y": 1,
+      "width": 19,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 3,
+      "y": -13,
+      "width": 27,
+      "height": 8
+     },
+     {
+      "x": 14,
+      "y": -4,
+      "width": 5,
+      "height": 9
+     }
+    ],
+    [
+     {
+      "x": 10,
+      "y": 0,
+      "width": 12,
+      "height": 20
+     }
+    ]
+   ],
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/katana.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Melee",
+   "group": "none",
+   "matter": {
+    "isStatic": true
+   },
+   "durability": 7,
+   "knockback": 1.5
+  },
+  "mine": {
+   "image": {
+    "image": "images/mine.png"
+   },
+   "cls": "Mine",
+   "group": "item",
+   "health": 1,
+   "damageModifier": {
+    "melee": 0,
+    "collision": 0
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   }
+  },
+  "mines": {
+   "image": {
+    "image": "images/weapon/mines.png"
+   },
+   "ammo": 2,
+   "projectile": {
+    "ref": "mine"
+   },
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/grenade_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Throwable",
+   "group": "dynamic_inactive",
+   "matter": {
+    "isStatic": true
+   }
+  },
+  "flashbang": {
+   "image": {
+    "image": "images/flashbang.png"
+   },
+   "material": "metal",
+   "health": 1,
+   "damageModifier": {
+    "melee": 0,
+    "collision": 0
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  },
+  "flashbangs": {
+   "image": {
+    "image": "images/weapon/flashbangs.png"
+   },
+   "ammo": 2,
+   "projectile": {
+    "ref": "flashbang"
+   },
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/grenade_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Throwable",
+   "group": "dynamic_inactive",
+   "matter": {
+    "isStatic": true
+   },
+   "detonationTime": 70
+  },
+  "shuriken": {
+   "image": {
+    "image": "images/shuriken.png"
+   },
+   "cls": "Projectile",
+   "group": "projectile",
+   "plain": true
+  },
+  "shurikens": {
+   "image": {
+    "image": "images/weapon/shurikens.png"
+   },
+   "ammo": 5,
+   "projectile": {
+    "ref": "shuriken"
+   },
+   "sounds": {
+    "draw": {
+     "sound": "sounds/weapon/grenade_draw.ogg",
+     "volume": 1,
+     "loop": false
+    }
+   },
+   "cls": "Throwable",
+   "group": "dynamic_inactive",
+   "matter": {
+    "isStatic": true
+   },
+   "damage": 15,
+   "speed": 9
+  },
+  "anchor": {
+   "image": {
+    "image": "images/collider.png"
+   },
+   "cls": "Marker",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "lamp": {
+   "image": {
+    "image": "images/lamp.png"
+   },
+   "cls": "Hanging",
+   "group": "dynamic_active",
+   "health": 1,
+   "material": "metal",
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_glass00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_glass01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   }
+  },
+  "conveyor": {
+   "image": {
+    "image": "images/conveyor.png"
+   },
+   "cls": "Conveyor",
+   "matter": {
+    "isStatic": true
+   },
+   "group": "none"
+  },
+  "range_target": {
+   "image": {
+    "image": "images/target.png"
+   },
+   "health": 5,
+   "flammable": true,
+   "matter": {
+    "isStatic": true
+   },
+   "sounds": {
+    "killed": [
+     {
+      "sound": "sounds/bust_wood00.ogg",
+      "volume": 1,
+      "loop": false
+     },
+     {
+      "sound": "sounds/bust_wood01.ogg",
+      "volume": 1,
+      "loop": false
+     }
+    ]
+   },
+   "onkill": {
+    "fn": true,
+    "name": "onkill"
+   },
+   "cls": "BaseObject",
+   "group": "dynamic_active"
+  }
+ },
+ "order": [
+  "dirt",
+  "concrete",
+  "concrete_stair00",
+  "concrete_stair01",
+  "concrete_slope00",
+  "concrete_slope01",
+  "brick",
+  "block",
+  "girder",
+  "metal",
+  "crate",
+  "crate_hanging",
+  "barrel",
+  "explosive_barrel",
+  "explosive_barrel_debris",
+  "grenade",
+  "molotov",
+  "filecab",
+  "globe",
+  "pipe",
+  "desk",
+  "chair",
+  "table",
+  "small_table",
+  "air_duct",
+  "pool_table",
+  "computer_monitor",
+  "computer_desktop",
+  "target",
+  "table_chair",
+  "beachball",
+  "paper",
+  "target_debris00",
+  "target_debris01",
+  "target_debris02",
+  "beachball_debris",
+  "crate_debris00",
+  "crate_debris01",
+  "crate_debris02",
+  "table_debris00",
+  "table_debris01",
+  "table_debris02",
+  "player",
+  "projectile",
+  "rocket",
+  "fire",
+  "hit",
+  "explosion_small",
+  "explosion_large",
+  "electric",
+  "spark",
+  "blood_small",
+  "blood_large",
+  "casing_small",
+  "casing_large",
+  "shell",
+  "smoke",
+  "burn",
+  "heavy_flash",
+  "light_flash",
+  "rifle_flash",
+  "axe_swing",
+  "sword_swing",
+  "machete_swing",
+  "pistol",
+  "uzi",
+  "magnum",
+  "rifle",
+  "shotgun",
+  "sniper",
+  "flamethrower",
+  "bazooka",
+  "fists",
+  "sword",
+  "axe",
+  "machete",
+  "grenades",
+  "molotovs",
+  "player_spawn",
+  "weapon_spawn",
+  "distance_marker",
+  "ladder",
+  "platform",
+  "wall",
+  "ledge",
+  "climb",
+  "exit_door",
+  "glass",
+  "glass_shard",
+  "corpse",
+  "smg",
+  "lobbed_grenade",
+  "grenade_launcher",
+  "taser_bolt",
+  "taser",
+  "bat",
+  "knife",
+  "plank",
+  "pipe_club",
+  "mine",
+  "mines",
+  "flashbang",
+  "flashbangs",
+  "shuriken",
+  "shurikens",
+  "anchor",
+  "lamp",
+  "conveyor",
+  "range_target"
+ ],
+ "groups": {
+  "none": {
+   "category": 0,
+   "mask": 0,
+   "above": 0
+  },
+  "static": {
+   "category": 1,
+   "mask": 4294967295,
+   "above": 0
+  },
+  "platform": {
+   "category": 2,
+   "mask": 4294967295,
+   "above": 0
+  },
+  "player": {
+   "category": 4,
+   "mask": 32777,
+   "above": 2
+  },
+  "dynamic_active": {
+   "category": 8,
+   "mask": -3,
+   "above": 2
+  },
+  "dynamic_inactive": {
+   "category": 16,
+   "mask": 1,
+   "above": 10
+  },
+  "debris": {
+   "category": 16,
+   "mask": 1,
+   "above": 10
+  },
+  "item": {
+   "category": 32,
+   "mask": 1,
+   "above": 10
+  },
+  "projectile": {
+   "category": 32768,
+   "mask": 13,
+   "above": 0
+  },
+  "full": {
+   "category": 4294967295,
+   "mask": 4294967295,
+   "above": 0
+  }
+ },
+ "materials": {
+  "dirt": {
+   "friction": 0.1,
+   "restitution": 0
+  },
+  "concrete": {
+   "friction": 0.5,
+   "restitution": 0.2
+  },
+  "metal": {
+   "friction": 0.5,
+   "restitution": 0.1
+  },
+  "stone": {
+   "friction": 0.5,
+   "restitution": 0.2
+  },
+  "glass": {
+   "friction": 0.5,
+   "restitution": 0.2
+  },
+  "wood": {
+   "friction": 1,
+   "restitution": 0.2
+  },
+  "paper": {
+   "friction": 0.5,
+   "restitution": 0.2
+  },
+  "flesh": {
+   "friction": 1,
+   "restitution": 0.2
+  }
+ },
+ "apparel": {
+  "headwear": {
+   "cap": "images/apparel/headwear/hat.png",
+   "aviator_hat": "images/apparel/headwear/aviator_hat.png"
+  },
+  "face": {
+   "eyes": "images/apparel/face/eyes.png",
+   "specs": "images/apparel/face/specs.png",
+   "face_paint": "images/apparel/face/face_paint.png"
+  },
+  "torso": {
+   "tuxedo": "images/apparel/torso/tuxedo.png",
+   "agent_suit": "images/apparel/torso/agent_suit.png",
+   "sweater": "images/apparel/torso/sweater.png",
+   "jacket": "images/apparel/torso/jacket.png",
+   "aviator_jacket": "images/apparel/torso/aviator_jacket.png",
+   "tailored_suit": "images/apparel/torso/tailored_suit.png"
+  },
+  "hands": {
+   "gloves": "images/apparel/hands/gloves.png"
+  }
+ }
+}

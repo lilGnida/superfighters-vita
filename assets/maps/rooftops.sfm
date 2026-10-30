@@ -1,0 +1,854 @@
+{
+ "name": "Rooftops",
+ "layers": [
+  {
+   "image": "images/levels/sky_city.png",
+   "x": 0,
+   "y": 0,
+   "parallax": 0.2
+  },
+  {
+   "image": "images/levels/rooftops.png",
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "bounds": {
+  "x": 20,
+  "y": 92,
+  "w": 846,
+  "h": 312
+ },
+ "objects": [
+  {
+   "parentKey": "wall",
+   "id": 0,
+   "matter": {
+    "position": {
+     "x": 22.5,
+     "y": 240.0
+    }
+   },
+   "size": {
+    "w": 25,
+    "h": 360
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 1,
+   "matter": {
+    "position": {
+     "x": 255.5,
+     "y": 399.0
+    }
+   },
+   "size": {
+    "w": 441,
+    "h": 42
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 2,
+   "matter": {
+    "position": {
+     "x": 124.5,
+     "y": 336.0
+    }
+   },
+   "size": {
+    "w": 11,
+    "h": 84
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 3,
+   "matter": {
+    "position": {
+     "x": 514.0,
+     "y": 393.0
+    }
+   },
+   "size": {
+    "w": 76,
+    "h": 54
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 4,
+   "matter": {
+    "position": {
+     "x": 630.5,
+     "y": 174.0
+    }
+   },
+   "size": {
+    "w": 157,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 5,
+   "matter": {
+    "position": {
+     "x": 558.0,
+     "y": 200.5
+    }
+   },
+   "size": {
+    "w": 12,
+    "h": 41
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 6,
+   "matter": {
+    "position": {
+     "x": 715.0,
+     "y": 194.5
+    }
+   },
+   "size": {
+    "w": 12,
+    "h": 53
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 7,
+   "matter": {
+    "position": {
+     "x": 802.5,
+     "y": 174.0
+    }
+   },
+   "size": {
+    "w": 89,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 8,
+   "matter": {
+    "position": {
+     "x": 820.5,
+     "y": 157.0
+    }
+   },
+   "size": {
+    "w": 49,
+    "h": 22
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 9,
+   "matter": {
+    "position": {
+     "x": 699.5,
+     "y": 264.0
+    }
+   },
+   "size": {
+    "w": 295,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 10,
+   "matter": {
+    "position": {
+     "x": 558.0,
+     "y": 300.5
+    }
+   },
+   "size": {
+    "w": 12,
+    "h": 61
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 11,
+   "matter": {
+    "position": {
+     "x": 640.5,
+     "y": 288.0
+    }
+   },
+   "size": {
+    "w": 153,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 12,
+   "matter": {
+    "position": {
+     "x": 711.5,
+     "y": 315.0
+    }
+   },
+   "size": {
+    "w": 13,
+    "h": 42
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 13,
+   "matter": {
+    "position": {
+     "x": 782.5,
+     "y": 300.0
+    }
+   },
+   "size": {
+    "w": 129,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 14,
+   "matter": {
+    "position": {
+     "x": 639.36,
+     "y": 393.42
+    }
+   },
+   "verts": [
+    [
+     -87.35530085959886,
+     -27.421203438395423
+    ],
+    [
+     69.64469914040114,
+     -27.421203438395423
+    ],
+    [
+     90.64469914040114,
+     -9.421203438395423
+    ],
+    [
+     90.64469914040114,
+     26.578796561604577
+    ],
+    [
+     -87.35530085959886,
+     26.578796561604577
+    ]
+   ],
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 15,
+   "matter": {
+    "position": {
+     "x": 788.5,
+     "y": 402.0
+    }
+   },
+   "size": {
+    "w": 117,
+    "h": 36
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 16,
+   "matter": {
+    "position": {
+     "x": 861.5,
+     "y": 240.0
+    }
+   },
+   "size": {
+    "w": 29,
+    "h": 360
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 17,
+   "matter": {
+    "position": {
+     "x": 244.0,
+     "y": 272.5
+    }
+   },
+   "size": {
+    "w": 30,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 18,
+   "matter": {
+    "position": {
+     "x": 300.5,
+     "y": 272.5
+    }
+   },
+   "size": {
+    "w": 31,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 19,
+   "matter": {
+    "position": {
+     "x": 234.5,
+     "y": 316.5
+    }
+   },
+   "size": {
+    "w": 51,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 20,
+   "matter": {
+    "position": {
+     "x": 731.5,
+     "y": 192.5
+    }
+   },
+   "size": {
+    "w": 19,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 21,
+   "matter": {
+    "position": {
+     "x": 748.5,
+     "y": 215.5
+    }
+   },
+   "size": {
+    "w": 43,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 22,
+   "matter": {
+    "position": {
+     "x": 748.5,
+     "y": 237.5
+    }
+   },
+   "size": {
+    "w": 43,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "climb",
+   "id": 23,
+   "matter": {
+    "position": {
+     "x": 272.5,
+     "y": 309.5
+    }
+   },
+   "size": {
+    "w": 13,
+    "h": 137
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 24,
+   "matter": {
+    "position": {
+     "x": 80,
+     "y": 368
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 25,
+   "matter": {
+    "position": {
+     "x": 200,
+     "y": 368
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 26,
+   "matter": {
+    "position": {
+     "x": 380,
+     "y": 368
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 27,
+   "matter": {
+    "position": {
+     "x": 240,
+     "y": 261
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 28,
+   "matter": {
+    "position": {
+     "x": 300,
+     "y": 261
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 29,
+   "matter": {
+    "position": {
+     "x": 500,
+     "y": 356
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 30,
+   "matter": {
+    "position": {
+     "x": 620,
+     "y": 356
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 31,
+   "matter": {
+    "position": {
+     "x": 800,
+     "y": 374
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 32,
+   "matter": {
+    "position": {
+     "x": 620,
+     "y": 248
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 33,
+   "matter": {
+    "position": {
+     "x": 780,
+     "y": 248
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 34,
+   "matter": {
+    "position": {
+     "x": 650,
+     "y": 158
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 35,
+   "matter": {
+    "position": {
+     "x": 820,
+     "y": 136
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 36,
+   "matter": {
+    "position": {
+     "x": 150,
+     "y": 370
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 37,
+   "matter": {
+    "position": {
+     "x": 330,
+     "y": 370
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 38,
+   "matter": {
+    "position": {
+     "x": 234,
+     "y": 307
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 39,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 358
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 40,
+   "matter": {
+    "position": {
+     "x": 780,
+     "y": 376
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 41,
+   "matter": {
+    "position": {
+     "x": 680,
+     "y": 250
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 42,
+   "matter": {
+    "position": {
+     "x": 800,
+     "y": 160
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 43,
+   "matter": {
+    "position": {
+     "x": 420,
+     "y": 370
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 44,
+   "matter": {
+    "position": {
+     "x": 590,
+     "y": 358.5
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 45,
+   "matter": {
+    "position": {
+     "x": 790,
+     "y": 376
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 46,
+   "matter": {
+    "position": {
+     "x": 600,
+     "y": 250
+    }
+   }
+  },
+  {
+   "parentKey": "desk",
+   "id": 47,
+   "matter": {
+    "position": {
+     "x": 660,
+     "y": 251
+    }
+   }
+  },
+  {
+   "parentKey": "computer_monitor",
+   "id": 48,
+   "matter": {
+    "position": {
+     "x": 655,
+     "y": 238
+    }
+   }
+  },
+  {
+   "parentKey": "chair",
+   "id": 49,
+   "matter": {
+    "position": {
+     "x": 682,
+     "y": 249.5
+    }
+   }
+  },
+  {
+   "parentKey": "filecab",
+   "id": 50,
+   "matter": {
+    "position": {
+     "x": 760,
+     "y": 250.5
+    }
+   }
+  },
+  {
+   "parentKey": "barrel",
+   "id": 51,
+   "matter": {
+    "position": {
+     "x": 70,
+     "y": 370.5
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 52,
+   "matter": {
+    "position": {
+     "x": 400,
+     "y": 370.5
+    }
+   }
+  },
+  {
+   "parentKey": "anchor",
+   "id": 53,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 180
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "crate_hanging",
+   "id": 54,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 214
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 55,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 180
+    }
+   },
+   "targetAId": 53,
+   "targetBId": 54
+  },
+  {
+   "parentKey": "anchor",
+   "id": 56,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 294
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 57,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 318
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 58,
+   "matter": {
+    "position": {
+     "x": 640,
+     "y": 294
+    }
+   },
+   "targetAId": 56,
+   "targetBId": 57
+  },
+  {
+   "parentKey": "anchor",
+   "id": 59,
+   "matter": {
+    "position": {
+     "x": 790,
+     "y": 306
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 60,
+   "matter": {
+    "position": {
+     "x": 790,
+     "y": 330
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 61,
+   "matter": {
+    "position": {
+     "x": 790,
+     "y": 306
+    }
+   },
+   "targetAId": 59,
+   "targetBId": 60
+  },
+  {
+   "parentKey": "glass",
+   "id": 62,
+   "matter": {
+    "position": {
+     "x": 558,
+     "y": 238
+    }
+   },
+   "tiling": {
+    "width": 1,
+    "height": 4
+   }
+  },
+  {
+   "parentKey": "glass",
+   "id": 63,
+   "matter": {
+    "position": {
+     "x": 558,
+     "y": 346
+    }
+   },
+   "tiling": {
+    "width": 1,
+    "height": 4
+   }
+  },
+  {
+   "parentKey": "exit_door",
+   "id": 64,
+   "matter": {
+    "position": {
+     "x": 839,
+     "y": 248.5
+    }
+   },
+   "size": {
+    "w": 12,
+    "h": 19
+   },
+   "hidden": true,
+   "customId": "door0a",
+   "link": "door0b"
+  },
+  {
+   "parentKey": "exit_door",
+   "id": 65,
+   "matter": {
+    "position": {
+     "x": 839,
+     "y": 374.5
+    }
+   },
+   "size": {
+    "w": 12,
+    "h": 19
+   },
+   "hidden": true,
+   "customId": "door0b",
+   "link": "door0a"
+  }
+ ],
+ "deathY": 430
+}

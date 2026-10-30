@@ -1,0 +1,616 @@
+{
+ "name": "Range",
+ "layers": [
+  {
+   "image": "images/levels/range.png",
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "bounds": {
+  "x": 30,
+  "y": 30,
+  "w": 344,
+  "h": 262
+ },
+ "objects": [
+  {
+   "parentKey": "wall",
+   "id": 0,
+   "matter": {
+    "position": {
+     "x": 41.5,
+     "y": 165.5
+    }
+   },
+   "size": {
+    "w": 23,
+    "h": 253
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 1,
+   "matter": {
+    "position": {
+     "x": 362.0,
+     "y": 161.0
+    }
+   },
+   "size": {
+    "w": 24,
+    "h": 262
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 2,
+   "matter": {
+    "position": {
+     "x": 201.5,
+     "y": 45.0
+    }
+   },
+   "size": {
+    "w": 297,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 3,
+   "matter": {
+    "position": {
+     "x": 344.5,
+     "y": 77.5
+    }
+   },
+   "size": {
+    "w": 11,
+    "h": 53
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 4,
+   "matter": {
+    "position": {
+     "x": 101.18,
+     "y": 274.17
+    }
+   },
+   "verts": [
+    [
+     -48.18277903043969,
+     -19.16586809470124
+    ],
+    [
+     31.81722096956031,
+     -19.16586809470124
+    ],
+    [
+     52.81722096956031,
+     -1.1658680947012385
+    ],
+    [
+     52.81722096956031,
+     17.83413190529876
+    ],
+    [
+     -48.18277903043969,
+     17.83413190529876
+    ]
+   ],
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 5,
+   "matter": {
+    "position": {
+     "x": 229.0,
+     "y": 282.5
+    }
+   },
+   "size": {
+    "w": 150,
+    "h": 19
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 6,
+   "matter": {
+    "position": {
+     "x": 328.51,
+     "y": 275.02
+    }
+   },
+   "verts": [
+    [
+     -25.511935483870957,
+     -2.0241935483870748
+    ],
+    [
+     -4.511935483870957,
+     -20.024193548387075
+    ],
+    [
+     21.488064516129043,
+     -20.024193548387075
+    ],
+    [
+     21.488064516129043,
+     16.975806451612925
+    ],
+    [
+     -25.511935483870957,
+     16.975806451612925
+    ]
+   ],
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 7,
+   "matter": {
+    "position": {
+     "x": 165.5,
+     "y": 195.0
+    }
+   },
+   "verts": [
+    [
+     -13.5,
+     -12.0
+    ],
+    [
+     -9.5,
+     -12.0
+    ],
+    [
+     13.5,
+     12.0
+    ],
+    [
+     9.5,
+     12.0
+    ]
+   ],
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 8,
+   "matter": {
+    "position": {
+     "x": 103.5,
+     "y": 112.5
+    }
+   },
+   "size": {
+    "w": 71,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 9,
+   "matter": {
+    "position": {
+     "x": 103.5,
+     "y": 184.5
+    }
+   },
+   "size": {
+    "w": 101,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 10,
+   "matter": {
+    "position": {
+     "x": 196.0,
+     "y": 167.5
+    }
+   },
+   "size": {
+    "w": 48,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 11,
+   "matter": {
+    "position": {
+     "x": 246.0,
+     "y": 145.5
+    }
+   },
+   "size": {
+    "w": 102,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 12,
+   "matter": {
+    "position": {
+     "x": 220.5,
+     "y": 208.5
+    }
+   },
+   "size": {
+    "w": 91,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 13,
+   "matter": {
+    "position": {
+     "x": 220.5,
+     "y": 230.5
+    }
+   },
+   "size": {
+    "w": 91,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 14,
+   "matter": {
+    "position": {
+     "x": 220.5,
+     "y": 252.5
+    }
+   },
+   "size": {
+    "w": 91,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "climb",
+   "id": 15,
+   "matter": {
+    "position": {
+     "x": 59.5,
+     "y": 139.0
+    }
+   },
+   "size": {
+    "w": 11,
+    "h": 88
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 16,
+   "matter": {
+    "position": {
+     "x": 96,
+     "y": 245
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 17,
+   "matter": {
+    "position": {
+     "x": 120,
+     "y": 175
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 18,
+   "matter": {
+    "position": {
+     "x": 250,
+     "y": 136
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 19,
+   "matter": {
+    "position": {
+     "x": 205,
+     "y": 265
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 20,
+   "matter": {
+    "position": {
+     "x": 112,
+     "y": 247
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 21,
+   "matter": {
+    "position": {
+     "x": 330,
+     "y": 247
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 22,
+   "matter": {
+    "position": {
+     "x": 240,
+     "y": 199
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 23,
+   "matter": {
+    "position": {
+     "x": 128,
+     "y": 247
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 24,
+   "matter": {
+    "position": {
+     "x": 290,
+     "y": 265
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 25,
+   "matter": {
+    "position": {
+     "x": 336,
+     "y": 247
+    }
+   }
+  },
+  {
+   "parentKey": "anchor",
+   "id": 26,
+   "matter": {
+    "position": {
+     "x": 120,
+     "y": 51
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 27,
+   "matter": {
+    "position": {
+     "x": 120,
+     "y": 75
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 28,
+   "matter": {
+    "position": {
+     "x": 120,
+     "y": 51
+    }
+   },
+   "targetAId": 26,
+   "targetBId": 27
+  },
+  {
+   "parentKey": "anchor",
+   "id": 29,
+   "matter": {
+    "position": {
+     "x": 300,
+     "y": 51
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 30,
+   "matter": {
+    "position": {
+     "x": 300,
+     "y": 81
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 31,
+   "matter": {
+    "position": {
+     "x": 300,
+     "y": 51
+    }
+   },
+   "targetAId": 29,
+   "targetBId": 30
+  },
+  {
+   "parentKey": "range_target",
+   "id": 32,
+   "matter": {
+    "position": {
+     "x": 132,
+     "y": 100
+    }
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 33,
+   "matter": {
+    "position": {
+     "x": 212,
+     "y": 154
+    }
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 34,
+   "matter": {
+    "position": {
+     "x": 290,
+     "y": 132
+    }
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 35,
+   "matter": {
+    "position": {
+     "x": 260,
+     "y": 196
+    }
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 36,
+   "matter": {
+    "position": {
+     "x": 342,
+     "y": 243
+    }
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 37,
+   "matter": {
+    "position": {
+     "x": 150,
+     "y": 100
+    }
+   },
+   "rail": {
+    "dx": 170,
+    "dy": 0,
+    "period": 420
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 38,
+   "matter": {
+    "position": {
+     "x": 70,
+     "y": 216
+    }
+   },
+   "rail": {
+    "dx": 76,
+    "dy": 0,
+    "period": 300
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 39,
+   "matter": {
+    "position": {
+     "x": 332,
+     "y": 120
+    }
+   },
+   "rail": {
+    "dx": 0,
+    "dy": 104,
+    "period": 360
+   }
+  },
+  {
+   "parentKey": "range_target",
+   "id": 40,
+   "matter": {
+    "position": {
+     "x": 226,
+     "y": 178
+    }
+   },
+   "rail": {
+    "dx": 70,
+    "dy": 0,
+    "period": 240
+   }
+  },
+  {
+   "parentKey": "glass",
+   "id": 41,
+   "matter": {
+    "position": {
+     "x": 283,
+     "y": 124
+    }
+   },
+   "tiling": {
+    "width": 1,
+    "height": 4
+   }
+  },
+  {
+   "parentKey": "exit_door",
+   "id": 42,
+   "matter": {
+    "position": {
+     "x": 63,
+     "y": 245.5
+    }
+   },
+   "size": {
+    "w": 12,
+    "h": 19
+   },
+   "hidden": true,
+   "customId": "exit",
+   "link": "__exit"
+  }
+ ],
+ "zoom": 3.0
+}

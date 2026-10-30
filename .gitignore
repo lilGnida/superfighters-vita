@@ -1,0 +1,10 @@
+build/
+build-vita/
+*.vpk
+*.zip
+*.jsonl
+*.log
+/*.png
+__pycache__/
+/cd/
+/cp/

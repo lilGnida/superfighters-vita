@@ -1,0 +1,11 @@
+{
+ "_help": "Token economy. A full unlock of every perk and skill costs about 10000 tokens.",
+ "tokens": {"round": 12, "kill": 6, "win": 20, "wave": 12},
+ "difficulty": [0.6, 1.0, 1.5],
+ "ranks": [
+  {"name": "Recruit", "tokens": 0}, {"name": "Rookie", "tokens": 400}, {"name": "Merc", "tokens": 1200},
+  {"name": "Veteran", "tokens": 3000}, {"name": "Elite", "tokens": 6000}, {"name": "Legend", "tokens": 10000}
+ ],
+ "dailyEvents": 2,
+ "dailyContracts": 3
+}

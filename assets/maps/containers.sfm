@@ -1,0 +1,233 @@
+{
+ "name": "Containers",
+ "layers": [
+  {
+   "image": "images/levels/containers.png",
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "bounds": {
+  "x": 0,
+  "y": 0,
+  "w": 347,
+  "h": 222
+ },
+ "objects": [
+  {
+   "parentKey": "wall",
+   "id": 0,
+   "matter": {
+    "position": {
+     "x": 10.5,
+     "y": 111.0
+    }
+   },
+   "size": {
+    "w": 21,
+    "h": 222
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 1,
+   "matter": {
+    "position": {
+     "x": 337.0,
+     "y": 111.0
+    }
+   },
+   "size": {
+    "w": 20,
+    "h": 222
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 2,
+   "matter": {
+    "position": {
+     "x": 174.0,
+     "y": 10.0
+    }
+   },
+   "size": {
+    "w": 306,
+    "h": 12
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 3,
+   "matter": {
+    "position": {
+     "x": 114.0,
+     "y": 185.0
+    }
+   },
+   "size": {
+    "w": 186,
+    "h": 74
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 4,
+   "matter": {
+    "position": {
+     "x": 267.0,
+     "y": 166.5
+    }
+   },
+   "size": {
+    "w": 120,
+    "h": 111
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 5,
+   "matter": {
+    "position": {
+     "x": 50,
+     "y": 138
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 6,
+   "matter": {
+    "position": {
+     "x": 130,
+     "y": 138
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 7,
+   "matter": {
+    "position": {
+     "x": 190,
+     "y": 138
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 8,
+   "matter": {
+    "position": {
+     "x": 240,
+     "y": 101
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 9,
+   "matter": {
+    "position": {
+     "x": 310,
+     "y": 101
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 10,
+   "matter": {
+    "position": {
+     "x": 90,
+     "y": 140
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 11,
+   "matter": {
+    "position": {
+     "x": 160,
+     "y": 140
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 12,
+   "matter": {
+    "position": {
+     "x": 270,
+     "y": 103
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 13,
+   "matter": {
+    "position": {
+     "x": 120,
+     "y": 140
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 14,
+   "matter": {
+    "position": {
+     "x": 300,
+     "y": 103.5
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 15,
+   "matter": {
+    "position": {
+     "x": 230,
+     "y": 103
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 16,
+   "matter": {
+    "position": {
+     "x": 230,
+     "y": 87
+    }
+   }
+  },
+  {
+   "parentKey": "barrel",
+   "id": 17,
+   "matter": {
+    "position": {
+     "x": 60,
+     "y": 140.5
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 18,
+   "matter": {
+    "position": {
+     "x": 175,
+     "y": 140.5
+    }
+   }
+  }
+ ]
+}

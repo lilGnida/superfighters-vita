@@ -1,0 +1,24 @@
+{
+ "_help": "One or more events and contracts are picked at random every day. Stats: kill, win, grab, throw, finisher, disarm, ride, wave, thrown_weapon.",
+ "events": [
+  {"id": "double_any", "name": "Payday", "desc": "All tokens x1.5 today", "multiplier": 1.5},
+  {"id": "warehouse", "name": "Warehouse Sweep", "desc": "Tokens x2 on Warehouse", "multiplier": 2, "map": "warehouse"},
+  {"id": "backstreets", "name": "Street Fight", "desc": "Tokens x2 on Backstreets", "multiplier": 2, "map": "backstreets"},
+  {"id": "factory", "name": "Night Shift", "desc": "Tokens x2 on Factory", "multiplier": 2, "map": "factory"},
+  {"id": "sewers", "name": "Down the Drain", "desc": "Tokens x2 on Sewers", "multiplier": 2, "map": "sewers"},
+  {"id": "rooftops", "name": "Rooftop Run", "desc": "Tokens x2 on Rooftops", "multiplier": 2, "map": "rooftops"},
+  {"id": "containers", "name": "Dockside", "desc": "Tokens x2 on Containers", "multiplier": 2, "map": "containers"},
+  {"id": "waves", "name": "Last Stand", "desc": "Tokens x2 in Waves", "multiplier": 2, "mode": 2},
+  {"id": "teams", "name": "Brothers in Arms", "desc": "Tokens x2 in Teams", "multiplier": 2, "mode": 1}
+ ],
+ "contracts": [
+  {"id": "kills", "name": "Take down 8 fighters", "stat": "kill", "target": 8, "reward": 40},
+  {"id": "wins", "name": "Win 3 rounds", "stat": "win", "target": 3, "reward": 50},
+  {"id": "throws", "name": "Throw 5 fighters", "stat": "throw", "target": 5, "reward": 40},
+  {"id": "disarms", "name": "Disarm 3 fighters with a combo", "stat": "disarm", "target": 3, "reward": 50},
+  {"id": "finishers", "name": "Land 4 combo finishers", "stat": "finisher", "target": 4, "reward": 40},
+  {"id": "rides", "name": "Send 2 fighters on a rocket ride", "stat": "ride", "target": 2, "reward": 50},
+  {"id": "waves", "name": "Clear 5 waves", "stat": "wave", "target": 5, "reward": 60},
+  {"id": "blades", "name": "Hit 3 fighters with thrown weapons", "stat": "thrown_weapon", "target": 3, "reward": 40}
+ ]
+}

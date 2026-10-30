@@ -1,0 +1,732 @@
+{
+ "name": "Factory",
+ "layers": [
+  {
+   "image": "images/levels/factory.png",
+   "x": 0,
+   "y": 0
+  }
+ ],
+ "bounds": {
+  "x": 16,
+  "y": 62,
+  "w": 606,
+  "h": 204
+ },
+ "objects": [
+  {
+   "parentKey": "wall",
+   "id": 0,
+   "matter": {
+    "position": {
+     "x": 25.5,
+     "y": 167.5
+    }
+   },
+   "size": {
+    "w": 19,
+    "h": 211
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 1,
+   "matter": {
+    "position": {
+     "x": 612.5,
+     "y": 167.5
+    }
+   },
+   "size": {
+    "w": 19,
+    "h": 211
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 2,
+   "matter": {
+    "position": {
+     "x": 319.0,
+     "y": 75.5
+    }
+   },
+   "size": {
+    "w": 568,
+    "h": 13
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 3,
+   "matter": {
+    "position": {
+     "x": 112.0,
+     "y": 262.0
+    }
+   },
+   "size": {
+    "w": 154,
+    "h": 22
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 4,
+   "matter": {
+    "position": {
+     "x": 318.5,
+     "y": 244.89
+    }
+   },
+   "verts": [
+    [
+     -130.5,
+     6.112955032119913
+    ],
+    [
+     -81.5,
+     -32.88704496788009
+    ],
+    [
+     81.5,
+     -32.88704496788009
+    ],
+    [
+     130.5,
+     6.112955032119913
+    ],
+    [
+     130.5,
+     28.112955032119913
+    ],
+    [
+     -130.5,
+     28.112955032119913
+    ]
+   ],
+   "hidden": true
+  },
+  {
+   "parentKey": "wall",
+   "id": 5,
+   "matter": {
+    "position": {
+     "x": 526.0,
+     "y": 262.0
+    }
+   },
+   "size": {
+    "w": 154,
+    "h": 22
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 6,
+   "matter": {
+    "position": {
+     "x": 93.0,
+     "y": 186.5
+    }
+   },
+   "size": {
+    "w": 116,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 7,
+   "matter": {
+    "position": {
+     "x": 545.0,
+     "y": 186.5
+    }
+   },
+   "size": {
+    "w": 116,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 8,
+   "matter": {
+    "position": {
+     "x": 168.5,
+     "y": 146.5
+    }
+   },
+   "size": {
+    "w": 51,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 9,
+   "matter": {
+    "position": {
+     "x": 467.5,
+     "y": 146.5
+    }
+   },
+   "size": {
+    "w": 51,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 10,
+   "matter": {
+    "position": {
+     "x": 319.5,
+     "y": 169.5
+    }
+   },
+   "size": {
+    "w": 91,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 11,
+   "matter": {
+    "position": {
+     "x": 319.5,
+     "y": 191.5
+    }
+   },
+   "size": {
+    "w": 91,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 12,
+   "matter": {
+    "position": {
+     "x": 93.5,
+     "y": 208.5
+    }
+   },
+   "size": {
+    "w": 43,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 13,
+   "matter": {
+    "position": {
+     "x": 93.5,
+     "y": 230.5
+    }
+   },
+   "size": {
+    "w": 43,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 14,
+   "matter": {
+    "position": {
+     "x": 542.5,
+     "y": 208.5
+    }
+   },
+   "size": {
+    "w": 43,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "ledge",
+   "id": 15,
+   "matter": {
+    "position": {
+     "x": 542.5,
+     "y": 230.5
+    }
+   },
+   "size": {
+    "w": 43,
+    "h": 3
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "climb",
+   "id": 16,
+   "matter": {
+    "position": {
+     "x": 136.5,
+     "y": 158.0
+    }
+   },
+   "size": {
+    "w": 11,
+    "h": 54
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "climb",
+   "id": 17,
+   "matter": {
+    "position": {
+     "x": 499.5,
+     "y": 158.0
+    }
+   },
+   "size": {
+    "w": 11,
+    "h": 54
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 18,
+   "matter": {
+    "position": {
+     "x": 80,
+     "y": 241
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 19,
+   "matter": {
+    "position": {
+     "x": 560,
+     "y": 241
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 20,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 202
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 21,
+   "matter": {
+    "position": {
+     "x": 100,
+     "y": 175
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 22,
+   "matter": {
+    "position": {
+     "x": 540,
+     "y": 175
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 23,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 158
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 24,
+   "matter": {
+    "position": {
+     "x": 168,
+     "y": 135
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 25,
+   "matter": {
+    "position": {
+     "x": 467,
+     "y": 135
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 26,
+   "matter": {
+    "position": {
+     "x": 93,
+     "y": 197
+    }
+   }
+  },
+  {
+   "parentKey": "player_spawn",
+   "id": 27,
+   "matter": {
+    "position": {
+     "x": 542,
+     "y": 197
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 28,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 204
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 29,
+   "matter": {
+    "position": {
+     "x": 60,
+     "y": 243
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 30,
+   "matter": {
+    "position": {
+     "x": 580,
+     "y": 243
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 31,
+   "matter": {
+    "position": {
+     "x": 168,
+     "y": 137
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 32,
+   "matter": {
+    "position": {
+     "x": 467,
+     "y": 137
+    }
+   }
+  },
+  {
+   "parentKey": "weapon_spawn",
+   "id": 33,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 182
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 34,
+   "matter": {
+    "position": {
+     "x": 250,
+     "y": 204
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 35,
+   "matter": {
+    "position": {
+     "x": 388,
+     "y": 204
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 36,
+   "matter": {
+    "position": {
+     "x": 150,
+     "y": 243.5
+    }
+   }
+  },
+  {
+   "parentKey": "explosive_barrel",
+   "id": 37,
+   "matter": {
+    "position": {
+     "x": 490,
+     "y": 243.5
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 38,
+   "matter": {
+    "position": {
+     "x": 93,
+     "y": 199
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 39,
+   "matter": {
+    "position": {
+     "x": 300,
+     "y": 160
+    }
+   }
+  },
+  {
+   "parentKey": "barrel",
+   "id": 40,
+   "matter": {
+    "position": {
+     "x": 60,
+     "y": 243.5
+    }
+   }
+  },
+  {
+   "parentKey": "computer_desktop",
+   "id": 41,
+   "matter": {
+    "position": {
+     "x": 330,
+     "y": 206
+    }
+   }
+  },
+  {
+   "parentKey": "table",
+   "id": 42,
+   "matter": {
+    "position": {
+     "x": 560,
+     "y": 246
+    }
+   }
+  },
+  {
+   "parentKey": "crate",
+   "id": 43,
+   "matter": {
+    "position": {
+     "x": 542,
+     "y": 199
+    }
+   }
+  },
+  {
+   "parentKey": "anchor",
+   "id": 44,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 82
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "crate_hanging",
+   "id": 45,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 122
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 46,
+   "matter": {
+    "position": {
+     "x": 318,
+     "y": 82
+    }
+   },
+   "targetAId": 44,
+   "targetBId": 45
+  },
+  {
+   "parentKey": "anchor",
+   "id": 47,
+   "matter": {
+    "position": {
+     "x": 200,
+     "y": 82
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 48,
+   "matter": {
+    "position": {
+     "x": 200,
+     "y": 112
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 49,
+   "matter": {
+    "position": {
+     "x": 200,
+     "y": 82
+    }
+   },
+   "targetAId": 47,
+   "targetBId": 48
+  },
+  {
+   "parentKey": "anchor",
+   "id": 50,
+   "matter": {
+    "position": {
+     "x": 440,
+     "y": 82
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 51,
+   "matter": {
+    "position": {
+     "x": 440,
+     "y": 112
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 52,
+   "matter": {
+    "position": {
+     "x": 440,
+     "y": 82
+    }
+   },
+   "targetAId": 50,
+   "targetBId": 51
+  },
+  {
+   "parentKey": "anchor",
+   "id": 53,
+   "matter": {
+    "position": {
+     "x": 90,
+     "y": 82
+    }
+   },
+   "hidden": true
+  },
+  {
+   "parentKey": "lamp",
+   "id": 54,
+   "matter": {
+    "position": {
+     "x": 90,
+     "y": 108
+    }
+   }
+  },
+  {
+   "parentKey": "distance_marker",
+   "id": 55,
+   "matter": {
+    "position": {
+     "x": 90,
+     "y": 82
+    }
+   },
+   "targetAId": 53,
+   "targetBId": 54
+  },
+  {
+   "parentKey": "conveyor",
+   "id": 56,
+   "matter": {
+    "position": {
+     "x": 90.0,
+     "y": 252.5
+    }
+   },
+   "size": {
+    "w": 96,
+    "h": 3
+   },
+   "speed": 0.7
+  },
+  {
+   "parentKey": "conveyor",
+   "id": 57,
+   "matter": {
+    "position": {
+     "x": 548.0,
+     "y": 252.5
+    }
+   },
+   "size": {
+    "w": 96,
+    "h": 3
+   },
+   "speed": -0.7
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "_help": "type is one of: dash, counter, heal, shout, smoke, rage. See assets/config/README.txt.",
+ "skills": [
+  {"id": "dash", "type": "dash", "name": "Dash", "desc": "A burst of speed, right through fighters", "cost": 600,
+   "cooldown": 1200, "duration": 14, "amount": 3.5},
+  {"id": "counter", "type": "counter", "name": "Counter", "desc": "For a moment blows return to the attacker", "cost": 600,
+   "cooldown": 1500, "duration": 30, "amount": 1.5},
+  {"id": "second_wind", "type": "heal", "name": "Second Wind", "desc": "Restores 25 health", "cost": 600,
+   "cooldown": 1800, "amount": 25},
+  {"id": "war_cry", "type": "shout", "name": "War Cry", "desc": "Stuns everyone close by", "cost": 600,
+   "cooldown": 1500, "duration": 50, "radius": 60},
+  {"id": "smoke_bomb", "type": "smoke", "name": "Smoke Bomb", "desc": "Bots lose sight of you", "cost": 600,
+   "cooldown": 1500, "duration": 240},
+  {"id": "rage", "type": "rage", "name": "Rage", "desc": "5 seconds of double knockback", "cost": 600,
+   "cooldown": 1800, "duration": 300, "amount": 2}
+ ]
+}
