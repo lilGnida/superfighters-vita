@@ -41,6 +41,7 @@ Game::Game(const GameOptions& options) : mapText_(options.mapText), localPlayers
 	rangeWeapon_ = options.rangeWeapon;
 	startPistols_ = options.startPistols;
 	intro_ = options.intro;
+	backdrop_ = options.backdrop;
 	if (range) suddenDeathOn = false;
 
 	// Play an ambient noise
@@ -165,6 +166,11 @@ void Game::loadMap(const std::string& text) {
 			if (layer.tex) layers.push_back(layer);
 			else platform::log("map layer image '%s' missing", l.value("image", "").c_str());
 		}
+	}
+	if (backdrop_) {
+		MapLayer layer;
+		layer.tex = backdrop_;
+		layers.push_back(layer);
 	}
 	if (map.contains("bounds")) {
 		const json& b = map["bounds"];

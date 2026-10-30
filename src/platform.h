@@ -68,6 +68,10 @@ struct SpriteDraw {
 
 namespace platform {
 
+struct TileCell {
+	int sx, sy, x, y;      // 8x8 from the sheet, placed at x, y
+};
+
 bool init(const char* argv0);
 void shutdown();
 
@@ -77,6 +81,10 @@ Sound* sound(const std::string& path, float volume = 1.0f, bool loop = false);
 std::string assetPath(const std::string& rel);
 std::string readFile(const std::string& rel);          // contents of an asset text file
 std::vector<std::string> listFiles(const std::string& dirRel, const std::string& ext);
+std::vector<std::string> listUserFiles(const std::string& dirRel, const std::string& ext);   // in the data folder
+void makeUserFolder(const std::string& dirRel);
+// a picture put together from tiles in memory; there is one at a time, the next call replaces it
+Texture* composeTiles(const std::string& sheet, int w, int h, const std::vector<TileCell>& cells);
 // player data (settings, profile): ux0:data/superfighters on the Vita, ~/.superfighters on PC
 std::string readUserFile(const std::string& name);
 bool writeUserFile(const std::string& name, const std::string& data);

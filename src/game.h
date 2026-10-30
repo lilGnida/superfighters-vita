@@ -604,6 +604,7 @@ struct GameOptions {
 	bool rewards = false;    // rounds pay tokens to the local player
 	bool range = false;      // shooting range: no bots, no rounds
 	bool intro = false;      // every round opens with a countdown, the fighters held back
+	Texture* backdrop = nullptr;   // a picture made at run time, under everything
 	std::string rangeWeapon; // starts with this in the hands
 	bool startPistols = false;   // everybody starts with a pistol instead of empty hands
 };
@@ -748,6 +749,7 @@ private:
 	int botCount_ = 0, botDifficulty_ = 1;
 	std::string mapName_, rangeWeapon_;
 	bool startPistols_ = false, intro_ = false;
+	Texture* backdrop_ = nullptr;
 	bool rewards_ = false;
 	std::map<std::string, int> stats;
 	struct TargetSpot {

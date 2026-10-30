@@ -14,6 +14,7 @@
 #include "i18n.h"
 #include "profile.h"
 #include "settings.h"
+#include "sfdm.h"
 #include "progress.h"
 
 static int g_fail = 0;
@@ -1998,6 +1999,74 @@ int main(int argc, char** argv) {
 		CHECK(true, "the base draws in Russian");
 		i18n::setLanguage(i18n::ENGLISH);
 		CHECK(tr("Back") == "Back", "and back to English");
+	}
+
+	// ------------------------------------------------------------------ scenario 18: Superfighters Deluxe maps
+	{
+		printf("\n######## scenario 18: Deluxe maps\n");
+		std::string d = "header 200,-100,-100,100 ";
+		auto i32 = [&](int v) { d.append((const char*)&v, 4); };
+		auto f32 = [&](float v) { d.append((const char*)&v, 4); };
+		auto object = [&](const char* name, float x, float y, int w = 1, int h = 1, float rot = 0) {
+			d += (char)strlen(name);
+			d += name;
+			i32(1);
+			i32(0);
+			i32(2);
+			f32(x);
+			f32(y);
+			i32(3);
+			f32(rot);
+			i32(0x13);
+			i32(2);
+			i32(w);
+			i32(0x14);
+			i32(2);
+			i32(h);
+			i32(9999);
+		};
+		for (int i = 0; i < 20; i++) object("CONCRETE00A", -80.f + i * 8, -40);    // one floor of twenty tiles
+		object("METALPLAT00A", -40, 40, 10);
+		object("METALLADDER00A", 0, 40, 1, 10);
+		object("SPAWNPLAYER", -60, -20);
+		object("SPAWNPLAYER", 60, -20);
+		object("SPAWNWEAPON", 0, -20);
+		object("CRATE00", 40, -20);
+		object("BARRELEXPLOSIVE", -30, -20);
+		object("BGWALL00A", -20, 20, 4, 4);
+		object("EXPLOSIONTRIGGER", 0, 0);
+		sfdm::Loaded l = sfdm::load(d, "Test");
+		CHECK(l.width == 200 && l.height == 300, "the camera area becomes the bounds (%g x %g)", l.width, l.height);
+		CHECK(l.players == 2 && l.solids == 20, "objects are read (%d spawns, %d solid)", l.players, l.solids);
+		CHECK(l.art != nullptr, "the picture is put together");
+		json j = json::parse(l.mapText);
+		int walls = 0, ledges = 0, ladders = 0, crates = 0, barrels = 0, weapons = 0;
+		for (auto& o : j["objects"]) {
+			std::string key = o["parentKey"];
+			walls += key == "wall";
+			ledges += key == "ledge";
+			ladders += key == "climb";
+			crates += key == "crate";
+			barrels += key == "explosive_barrel";
+			weapons += key == "weapon_spawn";
+		}
+		CHECK(walls == 1, "neighbouring tiles become one wall (%d)", walls);
+		CHECK(ledges == 1 && ladders == 1 && crates == 1 && barrels == 1 && weapons == 1, "ledge, ladder, things: %d %d %d %d %d", ledges, ladders, crates, barrels, weapons);
+		PlayerInput idle2;
+		platform::setInputOverride(0, &idle2);
+		GameOptions o;
+		o.mapText = l.mapText;
+		o.backdrop = l.art;
+		o.localPlayers = 1;
+		o.bots = 1;
+		Game g(o);
+		run(g, idle2, 90);
+		Player* me = static_cast<Player*>(g.getObjectById(g.players[0].objectId));
+		CHECK(me && me->onGround().has_value(), "fighters stand on its floor (y %.0f)", me ? me->getPosition().y : 0.f);
+		CHECK(!g.layers.empty() && g.layers[0].tex == l.art, "the picture is under the level");
+		platform::setInputOverride(0, nullptr);
+		CHECK(sfdm::titleOf("4917_Hotel_II.sfdm") == "Hotel II" && sfdm::titleOf("Woods.sfdm") == "Woods", "titles from file names");
+		CHECK(sfdm::parse("no such thing", "x").players == 0, "rubbish in a file does no harm");
 	}
 
 	printf("\n######## scenario 8: character room data\n");

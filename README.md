@@ -52,6 +52,9 @@ The unfinished maps of the JS port are kept in `tools/levels/js_maps`.
   a room (the fighter walks there along the ladder), Left / Right its tab, Cross moves into the panel. The range is
   a real level (picture from `tools/levels/make_range.py`) with targets on rails, left through its door.
 - Every round opens with a three second countdown: the fighters stand still, your own one is lit and marked.
+- Superfighters Deluxe maps: `.sfdm` files put into `<data folder>/maps/` (`ux0:data/superfighters/maps` on the Vita) appear
+  in the map list and are read as they are (`src/sfdm.cpp`): walls, ledges, ladders, spawns, weapons and common objects.
+  They are drawn with our own tiles (`tools/make_sfd_tiles.py`); their C# scripts, joints and elevators do not run.
 - English and Russian (Settings, `src/i18n.cpp`): the texts are English, `assets/config/lang_ru.json` translates them
   and a copy in `<data folder>/config/` overrides it. The Cyrillic letters of both fonts are in `tools/cyrillic.py`
   (`tools/make_font.py`, `tools/make_base.py`).

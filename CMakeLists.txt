@@ -39,6 +39,7 @@ add_library(sfcore STATIC
   src/profile.cpp
   src/settings.cpp
   src/i18n.cpp
+  src/sfdm.cpp
   src/progress.cpp
   src/base.cpp)
 target_include_directories(sfcore PUBLIC third_party src)

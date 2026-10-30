@@ -16,6 +16,7 @@
 #include "profile.h"
 #include "i18n.h"
 #include "settings.h"
+#include "sfdm.h"
 #include "progress.h"
 
 #ifdef __vita__
@@ -35,6 +36,7 @@ struct MapInfo {
 	std::string file;    // name without extension
 	std::string title;
 	std::vector<Game::MapLayer> layers;   // for the preview
+	std::string sfdmFile;                 // a Superfighters Deluxe map from the data folder
 	float w = 0, h = 0, x = 0, y = 0;     // bounds
 };
 
@@ -42,6 +44,9 @@ struct App {
 	State state = State::Title;
 	BaseScreen base;
 	bool inRange = false;
+	std::string loadedDeluxe, deluxeMapText;
+	int previewWait = 0, deluxePlayers = 0, mapMessage = 0;
+	Texture* deluxeArt = nullptr;
 	std::vector<MapInfo> maps;
 	int mapIndex = 0;
 	int players = 1;      // local humans
@@ -124,6 +129,35 @@ void loadMapList(App& app) {
 		return 99;
 	};
 	std::stable_sort(app.maps.begin(), app.maps.end(), [&](auto& a, auto& b) { return rank(a) < rank(b); });
+
+	platform::makeUserFolder("maps");
+	for (auto& f : platform::listUserFiles("maps", ".sfdm")) {
+		MapInfo m;
+		m.file = f.substr(0, f.size() - 5);
+		m.title = sfdm::titleOf(f);
+		m.sfdmFile = f;
+		app.maps.push_back(m);
+	}
+}
+
+// Deluxe maps are read when they are chosen: there can be hundreds of them
+void prepareDeluxeMap(App& app) {
+	MapInfo& m = app.maps[app.mapIndex];
+	if (m.sfdmFile.empty() || app.loadedDeluxe == m.sfdmFile) return;
+	sfdm::Loaded l = sfdm::load(platform::readUserFile("maps/" + m.sfdmFile), m.title);
+	app.loadedDeluxe = m.sfdmFile;
+	app.deluxeMapText = l.mapText;
+	app.deluxeArt = l.art;
+	app.deluxePlayers = l.players;
+	for (auto& other : app.maps)
+		if (!other.sfdmFile.empty()) other.layers.clear();
+	m.w = l.width;
+	m.h = l.height;
+	if (l.art) {
+		Game::MapLayer layer;
+		layer.tex = l.art;
+		m.layers.push_back(layer);
+	}
 }
 
 void drawPreview(const MapInfo& m, float bx, float by, float bw, float bh) {
@@ -294,7 +328,14 @@ void drawHud(Game& game) {
 
 void startGame(App& app) {
 	GameOptions opts;
-	opts.mapText = platform::readFile("maps/" + app.maps[app.mapIndex].file + ".sfm");
+	const MapInfo& map = app.maps[app.mapIndex];
+	if (map.sfdmFile.empty()) {
+		opts.mapText = platform::readFile("maps/" + map.file + ".sfm");
+	} else {
+		prepareDeluxeMap(app);
+		opts.mapText = app.deluxeMapText;
+		opts.backdrop = app.deluxeArt;
+	}
 	opts.localPlayers = app.players;
 	opts.bots = app.bots;
 	opts.botDifficulty = app.difficulty;
@@ -436,13 +477,27 @@ void mapScreen(App& app, const MenuInput& in) {
 	}
 	if (in.left) app.mapIndex = (app.mapIndex + n - 1) % n;
 	if (in.right) app.mapIndex = (app.mapIndex + 1) % n;
+	if (in.left || in.right)
+		app.previewWait = 15;   // not while the list is flying past
+	else if (app.previewWait > 0)
+		app.previewWait--;
+	else
+		prepareDeluxeMap(app);
 	if (in.confirm) {
-		app.state = State::Setup;
+		prepareDeluxeMap(app);
+		if (app.maps[app.mapIndex].sfdmFile.empty() || app.deluxePlayers > 0)
+			app.state = State::Setup;
+		else
+			app.mapMessage = 90;
 		app.cursor = 0;
 	}
 	if (in.back) {
 		app.state = State::Title;
 		app.cursor = 0;
+	}
+	if (app.mapMessage > 0) {
+		app.mapMessage--;
+		centered(tr("This map has no places for fighters"), 410, 1.25f, 255, 120, 90);
 	}
 	centered(tr("CHOOSE A MAP"), 24, 3.0f, 255, 200, 60);
 	drawPreview(app.maps[app.mapIndex], 180, 80, 600, 340);

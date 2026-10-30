@@ -135,9 +135,10 @@ bool writeUserFile(const std::string& name, const std::string& data) {
 	return ok;
 }
 
-std::vector<std::string> listFiles(const std::string& dirRel, const std::string& ext) {
+namespace {
+std::vector<std::string> listFolder(const std::string& path, const std::string& ext) {
 	std::vector<std::string> out;
-	DIR* d = opendir(assetPath(dirRel).c_str());
+	DIR* d = opendir(path.c_str());
 	if (!d) return out;
 	while (dirent* e = readdir(d)) {
 		std::string name = e->d_name;
@@ -147,6 +148,46 @@ std::vector<std::string> listFiles(const std::string& dirRel, const std::string&
 	closedir(d);
 	std::sort(out.begin(), out.end());
 	return out;
+}
+}  // namespace
+
+std::vector<std::string> listFiles(const std::string& dirRel, const std::string& ext) { return listFolder(assetPath(dirRel), ext); }
+
+std::vector<std::string> listUserFiles(const std::string& dirRel, const std::string& ext) { return listFolder(userDir() + dirRel, ext); }
+
+void makeUserFolder(const std::string& dirRel) {
+#ifdef __vita__
+	sceIoMkdir((userDir() + dirRel).c_str(), 0777);
+#else
+	mkdir((userDir() + dirRel).c_str(), 0755);
+#endif
+}
+
+Texture* composeTiles(const std::string& sheet, int w, int h, const std::vector<TileCell>& cells) {
+	static Texture composed;
+	if (composed.tex) {
+		SDL_DestroyTexture(composed.tex);
+		composed.tex = nullptr;
+	}
+	w = std::min(w, 2048);     // what a console texture can hold; the rest of a giant map stays black
+	h = std::min(h, 2048);
+	SDL_Surface* tiles = IMG_Load(assetPath(sheet).c_str());
+	if (!tiles) return nullptr;
+	SDL_Surface* src = SDL_ConvertSurfaceFormat(tiles, SDL_PIXELFORMAT_RGBA32, 0);
+	SDL_FreeSurface(tiles);
+	SDL_Surface* dst = src ? SDL_CreateRGBSurfaceWithFormat(0, w, h, 32, SDL_PIXELFORMAT_RGBA32) : nullptr;
+	if (dst) {
+		for (const TileCell& c : cells) {
+			SDL_Rect from{c.sx, c.sy, 8, 8}, to{c.x, c.y, 8, 8};
+			SDL_BlitSurface(src, &from, dst, &to);
+		}
+		composed.tex = SDL_CreateTextureFromSurface(g_renderer, dst);
+		composed.w = w;
+		composed.h = h;
+		SDL_FreeSurface(dst);
+	}
+	if (src) SDL_FreeSurface(src);
+	return composed.tex ? &composed : nullptr;
 }
 
 bool init(const char* argv0) {
